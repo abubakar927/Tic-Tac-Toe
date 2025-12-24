@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <title>Tic Tac Toe</title>
+</head>
+<body class= "bg-gray-100 min-h-screen">
+    
+    <nav class="bg-blue-400 w-full h-16 items-center justify-center flex">
+       <span class= "font-bold text-white text-3xl"> Welcome to </span>
+       <span class= "px-3 font-bold text-black text-3xl">Tic Tac Toe</span>
+    </nav>
+    
+    <div class="w-80 h-80 grid grid-cols-3 grid-rows-3 gap-1 mx-auto mt-10">
+
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+            <div class="border-2 border-black flex items-center justify-center text-4xl hover:bg-gray-200 cursor-pointer font-bold"></div>
+    </div>
+            <div>
+                <h2 class="text-center font-bold text-2xl mt-4"><span id="turnDisplay"></span></h2>
+            </div>
+            <button id="resetGame" onclick="resetGame()" class= "bg-red-600 text-white px-4 py-2 rounded mt-4 mx-auto block hover:bg-red-400">Reset Game</button>
+           
+    <!-- Popup overlay -->
+    <div id="popup" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+
+        <!-- Popup Box -->
+        <div class="border-8 border-double border-blue-500 w-80 h-52 bg-gray-200 rounded-lg shadow-lg">
+
+            <div class="text-center p-4">
+                <h1 class="text-blue-800 font-bold text-3xl">
+                   Welcome to Tic Tac Toe
+                </h1>
+
+                <h2 class="text-blue-400 font-bold text-3xl mt-2">
+                    Ready to Play
+                </h2>
+             <!--Play Button-->    
+                <button id="playButton" class="bg-blue-400 text-white px-4 py-2 rounded mt-4 hover:bg-blue-500">Play</button>
+            </div>
+
+        </div>
+    </div>
+             
+    <!--2ndPopup overlay -->
+    <div id="popup2" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 ">
+
+        <!--2ndPopup Box -->
+        <div class="border-8 border-double border-blue-700 p-4 h-80 bg-white rounded-lg shadow-lg">
+
+            <div class="text-center p-4 w-70 border-2 border-red-500 rounded-lg bg-black-200 text-blue-800 font-bold text-3xl">
+                Congratulations!
+            </div> 
+            <div class="w-full h-20 justify-center flex px-4 py-2 mt-6">
+                <img src="excited.gif" alt="">
+            </div>
+            <h1 class="text-black-800 font-bold text-2xl text-center justify-center px-6 py-2 ">X WON</h1>
+            <!--Play Again Button--> 
+            <div class="flex justify-center w-80 p-4 py-2">  
+                <button id="playAgainButton" class=" bg-red-500 text-white px-4 py-2 rounded mt-2 hover:bg-red-400">Play Again</button>
+            </div> 
+
+        </div>
+    </div>
+
+       <audio src="music.mp3"></audio>
+       <audio src="gameover.mp3"></audio>
+       <audio src="ting.mp3"></audio>
+       <script src="index.js"></script>
+</body>
+</html>
